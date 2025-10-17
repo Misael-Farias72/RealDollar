@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealDollar - Conversor de moedas</title>
+    <link rel="stylesheet" href="RDStyle.css">
+</head>
+
+<body>
+    <header>
+        <img src="imagens/RealDollar-removebg-preview.png">
+
+        <nav>
+            <ul class="nav-link">
+                <li><a class="headerlink" href=""></a>Projetos</li>
+                <li><a class="headerlink" onclick="" href="#link_contatos">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="container">
+            <h1>Conversor de Moedas</h1>
+            <form class="Convform" id="Conv_form">
+
+                <!--Linha superior (input)-->
+                <div class="Currency_row">
+
+                    <!--caixa do valor a converter-->
+                    <div class="Currency_input">
+                        <label for="amount">Quantia</label>
+                        <input type="number" id="amount" placeholder="Digite aqui" step="0.1" min="0" required>
+                    </div>
+
+                    <!--caixa do tipo de moeda a converter -->
+                    <div class="currency_select">
+                        <label for="fromCurrency">De</label>
+                        <select id="fromCurrency" required>
+                            <option value="USD">USD - Dólar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="BRL" selected>BRL - Real</option>
+                            <option value="GBP">GBP - Libra</option>
+                            <option value="JPY">JPY - Iene</option>
+                            <option value="CAD">CAD - Dólar canadense</option>
+                            <option value="AUD">AUD - Dólar australiano</option>
+                            <option value="CHF">CHF - Franco suíço</option>
+                            <option value="CNY">CNY - Yuan</option>
+                            <option value="ARS">ARS - Peso</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!--Linha inferior (output)-->
+                <div class="Currency_row">
+
+                    <!--caixa do valor convertido -->
+                    <div class="Currency_input">
+                        <label for="ConvertedAmount">Resultado</label>
+                        <input type="text" id="ConvertedAmount" placeholder="Valor Convertido" readonly>
+                    </div>
+
+                    <!--caixa do tipo de moeda a ser convertido -->
+                    <div class="currency_select">
+                        <label for="toCurrency">Para</label>
+                        <select id="toCurrency" required>
+                            <option value="USD" selected>USD - Dólar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="BRL">BRL - Real</option>
+                            <option value="GBP">GBP - Libra</option>
+                            <option value="JPY">JPY - Iene</option>
+                            <option value="CAD">CAD - Dólar canadense</option>
+                            <option value="AUD">AUD - Dólar australiano</option>
+                            <option value="CHF">CHF - Franco suíço</option>
+                            <option value="CNY">CNY - Yuan</option>
+                            <option value="ARS">ARS - Peso</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!--Botão de conversão-->
+                <button class="ConvButton" id="Conv_button" type="submit">Converter</button>
+
+
+
+            </form>
+
+
+
+            <!--Caixa de loading-->
+            <div class="loading">
+                <div class="spinner"></div>
+                <p class="cotacao">Buscando cotação...</p>
+            </div>
+
+            <div class="result"></div>
+            <div class="error"></div>
+
+            <!--Texto no rodapé da box abaixo do button-->
+            <div class="info">
+                <img class="infoLogo"
+                    src="imagens/information-icon-info-point-icon-black-help-logo-info-simple-sign-vector-removebg-preview.png">
+                <p>Taxas atualizadas em tempo real por</p>
+                <img class="server" src="imagens/Captura_de_tela_2025-09-07_213042-removebg-preview.png">
+            </div>
+        </div>
+
+
+        <!--Area de contatos -->
+        <div class="contacts_area">
+            <h2 id="link_contatos">Contatos</h2>
+
+            <div class="contacts_box">
+                <ul>
+                    <li><a href="https://www.instagram.com/fariasmisael761?igsh=dnM1ODlrYXQxaWEw"><img class="social"
+                                src="/Conversor de medidas/RealDollar/imagens/instagram.png"></a></li>
+                    <li><a href="https://www.facebook.com/share/1CqhHDV4fC/"><img class="social"
+                                src="/Conversor de medidas/RealDollar/imagens/facebook.png"></a></li>
+
+                    <li><a
+                            href="https://www.linkedin.com/in/misael-farias-0a4071351?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
+                                class="social" src="/Conversor de medidas/RealDollar/imagens/linkedin.png"></a></li>
+                </ul>
+            </div>
+
+            <div class="email_box">
+                <div class="email">
+                    <img class="gmail_logo" src="/RealDolar/imagens/gmail.png">
+                    <p>vianamisael761@gmail.com</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </main>
+    <script src="RDscript.js"></script>
+
+</body>
+
+</html>
