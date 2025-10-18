@@ -74,7 +74,7 @@ main {
 
 .container {
 
-
+      
       background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(10px) saturate(180%);
       padding: 100px;
@@ -317,5 +317,55 @@ li:hover {
 
 .gmail_logo {
       height: 25px;
+
+}
+
+@media (max-width: 800px){
+
+     .nav-link{
+      display: none;
+     }
+
+     .RD{
+      height: 250px;
+      margin-top: 100px;
+      margin-left: 30px;
+     }
+      
+      .container{
+            min-width: 500px;
+      }
+
+      h1{
+            margin-left: -28px;
+      }
+
+      .ConvButton{
+            width: 100%;
+            padding: 30px;
+      }
+
+      .info{
+            flex-direction: column;
+      }
+
+      .contacts_area{
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            backdrop-filter: none;
+      }
+
+      .contacts_box{
+            background: rgba(255, 255, 255, 0.503);
+      }
+
+      .email_box{
+            background: rgba(255, 255, 255, 0.503);
+      }
+
+
+
+
 
 }
