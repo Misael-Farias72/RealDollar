@@ -320,7 +320,7 @@ li:hover {
 
 }
 
-@media (max-width: 800px){
+@media (max-width: 768px){
 
      .nav-link{
       display: none;
