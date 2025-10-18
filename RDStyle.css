@@ -16,7 +16,7 @@ html{
 
 /*Corpo da página*/
 body {
-      min-height: 110vh;
+      
       background-image: linear-gradient(white, rgb(0, 255, 179));
       background-repeat: no-repeat;
       display: flex;
