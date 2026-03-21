@@ -12,13 +12,25 @@ const API_URL = "https://api.exchangerate-api.com/v4/latest/"
 
 
 async function convertMoney() {
+
+
     /*O css foi chamado para alterar o display do loading de none para block*/
     loading.style.display = "block"
     error.style.display = "none"
     result.style.display = "none"
 
+     if(fromCurrency.value === toCurrency.value){
+        loading.style.display = "none"
+        error.style.display = "block"
+        error.innerHTML = "Selecione moedas distintas"
+        return
+     }
+
+    
+
     /*Tenta acessar o servidor*/
     try {
+        
         const response = await fetch(API_URL + fromCurrency.value)
         const data = await response.json()
 
@@ -27,6 +39,7 @@ async function convertMoney() {
 
         ConvertedAmount.value = convertedValue
         result.style.display = "block"
+        loading.style.display = "none"
 
         result.innerHTML =
                 `<div style="font-size: 1.4rem;">
@@ -36,6 +49,7 @@ async function convertMoney() {
                        Taxa: 1 ${fromCurrency.value} = ${rate} ${toCurrency.value}
                   </div>`
 
+
     /*Serve para caso ocorra um erro ao acessar o servidor*/
     } catch (err) {
         error.style.display = "block"
@@ -43,8 +57,6 @@ async function convertMoney() {
 
 
     }
-
-    loading.style.display = "none"
 }
 
 
