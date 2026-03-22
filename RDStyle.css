@@ -80,7 +80,8 @@ main {
       backdrop-filter: blur(10px) saturate(180%);
       padding: 100px;
       border-radius: 30px;
-      width: 100%;
+      width: 90%;
+      margin: 0 auto;
       max-width: 800px;
       box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
       text-align: center;
@@ -323,6 +324,21 @@ li:hover {
 
 @media (max-width: 768px) {
 
+      body {
+            padding: 10px;
+      }
+
+      header {
+            flex-direction: column;
+            height: auto;
+            gap: 10px;
+      }
+
+       main {
+            padding: 40px 10px;
+      }
+
+      
       
       .nav-link {
             display: none;
@@ -334,9 +350,12 @@ li:hover {
             margin-left: 5%;
       }
 
-      .container {
-            min-width: 500px;
+        .container {
+            width: 100%;
+            padding: 30px 20px;
+            max-width: 100%;
       }
+
 
       h1 {
             margin-left: -28px;
