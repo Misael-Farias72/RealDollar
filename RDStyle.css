@@ -19,6 +19,7 @@ body {
 
       background-image: linear-gradient(white, rgb(0, 255, 179));
       background-repeat: no-repeat;
+      background-size: cover;
       display: flex;
       flex-direction: column;
 }
@@ -325,10 +326,6 @@ li:hover {
       
       .nav-link {
             display: none;
-      }
-
-      body{
-            background-size: cover;
       }
 
       .RD {
