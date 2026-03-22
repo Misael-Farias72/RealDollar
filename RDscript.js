@@ -27,7 +27,6 @@ async function convertMoney() {
      }
 
     
-
     /*Tenta acessar o servidor*/
     try {
         
